@@ -4,10 +4,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import "../styles/style.scss"
 import Header from "../components/Header"
+import Banner from "../components/Banner"
+
+
+
 const IndexPage = () => (
 
 <div>
   <Header/>
+  <Banner/>
 </div>
 )
 

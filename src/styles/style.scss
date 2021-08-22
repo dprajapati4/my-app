@@ -2,21 +2,32 @@ $font:"Helvetica Neue", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 
 // Colors
-$black:#212f45;
+// $black:#212f45;
+// $black:#0b525b;
+// $white:#fff;
+// $green:#144552;
+// $purple:#312244;
+
 $white:#fff;
-$green:#144552;
-$purple:#312244;
+$black:#000;
+$maroon:#833e;
+$off-white:#f2f4f5;
+
+
+
 
 html, body {
   font-family: $font;
   font-size: 16px;
+  // background-color: $black;
 }
 
 .container {
   width:1640px;
   min-width: 1640px;
   margin: 0 auto;
-  @media(max-width: 1440px) {
+
+  @media (max-width: 1440px) {
     width: 1280px;
     min-wight: 1280px;
   }
@@ -46,7 +57,7 @@ header {
         font-weight: 700;
         text-decoration: none;
         letter-spacing: 1.5px;
-        color: $green;
+        color: $black;
       }
     }
     .navigation{
@@ -57,13 +68,71 @@ header {
           letter-spacing: 1.75px;
           text-transform: lowercase;
           font-size: 0.75rem;
-          color: $purple;
+          color: $black;
           &:last-child {
-            margin-right: 5px;
+            margin-right: 0px;
           }
         }
       }
     }
 
+  }
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: $white;
+  position: relative;
+  height: 100vh;
+  .row {
+    position: relative;
+    .main-text {
+      font-size: 5.8rem;
+      text-transform: uppercase;
+      letter-spacing: 42px;
+      font-weight: 700;
+      color: $white;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      mix-blend-mode: difference;
+      z-index: 9;
+      @media (max-width: 1440px) {
+        font-size: 4.4rem;
+        letter-spacing: 36px;
+      }
+    }
+    .main-image {
+      width: 536px;
+      margin: 0 auto;
+      @media (max-width: 1440px) {
+        width: 436px;
+      }
+    }
+    .side-image {
+      width: 260px;
+      position: absolute;
+      @media (max-width: 1440px) {
+        width: 208px;
+      }
+      &.left {
+        left: 168px;
+        top: 12px;
+        @media (max-width: 1440px) {
+          left: 128px;
+        }
+      }
+      &.right {
+        right: 168px;
+        bottom: 12px;
+        @media (max-width: 1440px) {
+          right: 128px;
+        }
+      }
+    }
   }
 }
